@@ -74,7 +74,7 @@ function getZodiac() {
 
     let inputDate = new Date(value)
     let inputYear = inputDate.getFullYear()
-    
+
     // YYYY-MM-DD
     let strZodiacFullStartDate = inputYear + '-' + zodiacStartMonth + '-' + zodiacStartDay
     let zodiacFullStartDate = new Date(strZodiacFullStartDate)
@@ -85,4 +85,18 @@ function getZodiac() {
       return document.getElementById('demo').innerHTML = zodiac[i].name
     }
   }
+}
+
+var arr = [];
+
+function callPrompt() {
+  arr.push(+prompt("Enter a number"))
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  document.getElementById('result').innerHTML = ''
+  for (let i in arr) {
+    document.getElementById('result').innerHTML += arr[i] + ','
+  }
+  document.getElementById('result').innerHTML = document.getElementById('result').innerHTML.slice(0, -1)
 }
