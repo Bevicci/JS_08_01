@@ -87,7 +87,7 @@ function getZodiac() {
   }
 }
 
-var arr = [];
+let arr = [];
 
 function callPrompt() {
   arr.push(+prompt("Enter a number"))
@@ -99,4 +99,22 @@ function callPrompt() {
     document.getElementById('result').innerHTML += arr[i] + ','
   }
   document.getElementById('result').innerHTML = document.getElementById('result').innerHTML.slice(0, -1)
+}
+
+let num = []
+function btn() {
+  let x = document.getElementById('myNum').value
+  num.push(x)
+  console.log(num)
+  document.getElementById('array').innerHTML = num
+  document.getElementById('myNum').value = ''
+  negative();
+}
+function negative() {
+  document.getElementById('negative').innerHTML = ''
+  for (let i in num) {
+    if (num[i] < 0) {
+      document.getElementById('negative').innerHTML += num[i]
+    }
+  }
 }
