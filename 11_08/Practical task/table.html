@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Table with filters</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <table id="DietaryPatterns">
+        <tr>
+            <th>Dietary Patterns
+                <div class="dropdown">
+                    <i class="fa-solid fa-filter dropbtn" onclick="dropdownFunction()" ></i>
+                    <div id='myDropdown' class="dropdown-content">
+                        <input type="checkbox" id="Ketogenic" onclick="filter(this)">
+                        <label for="html">Ketogenic</label><br>
+                        <input type="checkbox" id="Mediterranean" onclick="filter(this)">
+                        <label for="html">Mediterranean</label><br>
+                        <input type="checkbox" id="Pescetarian" onclick="filter(this)">
+                        <label for="html">Pescetarian</label><br>
+                        <input type="checkbox" id="Vegetarian" onclick="filter(this)">
+                        <label for="html">Vegetarian</label><br>
+                        <input type="checkbox" id="Vegan" onclick="filter(this)">
+                        <label for="html">Vegan</label>
+                    </div>
+                </div>
+            </th><th>Definitions</th>
+        </tr>
+        <tr id="rowKetogenic">
+            <td>Ketogenic</td>
+            <td>High fats, moderate proteins, and very low carbohydrates</td>
+        </tr>
+        <tr id="rowMediterranean">
+            <td>Mediterranean</td>
+            <td>Plant-based eating plan with fish, poultry, whole grains, nuts, olive oil, and some dairy</td>
+        </tr>
+        <tr id="rowPescetarian">
+            <td>Pescetarian</td>
+            <td>Fish, as a main source of protein, vegetables and other plant-based foods</td>
+        </tr>
+        <tr id="rowVegetarian">
+            <td>Vegetarian</td>
+            <td>Do not eat meat or fish but may continue to eat eggs and dairy products</td>
+        </tr>
+        <tr id="rowVegan">
+            <td>Vegan</td>
+            <td>Adopting a plant-based diet and avoiding all foods that come from animals</td>
+        </tr>
+    </table>
+</body>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/1afe6f0570.js" crossorigin="anonymous"></script>
+
+</html>
