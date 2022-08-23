@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="display"></div>
+
+        <div class="keys">
+
+            <button class="operator" onclick="solve(this)">/</button>
+
+            <p><span onclick="addValue(this)">7</span>
+                <span onclick="addValue(this)">8</span>
+                <span onclick="addValue(this)">9</span>
+                <button class="operator" onclick="solve(this)">+</button>
+            </p>
+
+            <span onclick="addValue(this)">4</span>
+            <span onclick="addValue(this)">5</span>
+            <span onclick="addValue(this)">6</span>
+            <button class="operator" onclick="solve(this)">-</button>
+
+            <p><span onclick="addValue(this)">1</span>
+                <span onclick="addValue(this)">2</span>
+                <span onclick="addValue(this)">3</span>
+                <button class="operator" onclick="solve(this)">*</button>
+            </p>
+
+            <p><span onclick="addValue(this)">0</span>
+                <span onclick="addValue(this)">.</span>
+                <button class="equal" onclick="solve(this)">=</button>
+                <button id="reset" onclick="delResult()">DEL</button>
+            </p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
