@@ -1,8 +1,18 @@
+const elemDisplay = document.getElementById('display');
+
 function addValue(field) {
-    document.getElementById('display').innerHTML = document.getElementById('display').innerHTML + field.innerHTML
+    elemDisplay.innerHTML = elemDisplay.innerHTML + field.innerHTML
 }
 
-
 function delResult() {
-    document.getElementById('display').innerHTML = ''
+    elemDisplay.innerHTML = ''
+}
+
+function getResult() {
+    try {
+        elemDisplay.innerHTML = math.evaluate(elemDisplay.innerHTML);
+    } catch {
+        alert('Invalid entry or operation')
+        elemDisplay.innerHTML = ''
+    }
 }

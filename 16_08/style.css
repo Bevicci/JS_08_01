@@ -22,7 +22,7 @@ html {
     display: table;
   }
   
-  .display {
+  #display {
     color: #7d9daa9f;
     line-height: 3em;
     text-align: right;
