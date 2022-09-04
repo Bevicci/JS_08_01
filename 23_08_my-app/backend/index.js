@@ -1,5 +1,3 @@
-//How to get data from database, not from file
-
 const express = require('express'); //Load express module, import of module.(A module is a JavaScript library/file that you can import into other code using Node's require() function.)
 var path = require('path');
 const app = express(); //express app creation
@@ -14,27 +12,22 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-// // DataBase 
-// var mysql = require("mysql");
-// var con = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "",
-//     database: "js_08_01"
-// });
-// con.connect(function (err) {
-//     if (err) {
-//         console.log('Error connecting to Db');
-//         return;
-//     }
-//     console.log('Connection established');
-// });
-
-
-app.use(cors());//browser sequirity issues, CORS help to skip it
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+// DataBase  MySQL
+let mysql = require("mysql");
+let con = mysql.createConnection({ //define connection to database
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "js_08_01"
+});  
+con.connect(function (err) {
+    if (err) {
+        console.log('Error connecting to Db');
+        return;
+    }
+    console.log('Connection established');
+});
+//Now we have access to database, we can run sql query
 
 //The app.get() method specifies a callback function that will be invoked whenever there is an HTTP GET request with a path ('/') relative to the site root. 
 //The callback function takes a request and a response object as arguments, and calls send() on the response to return the string.
@@ -44,11 +37,14 @@ app.get('', (req, res) => {
     res.send('Server is running, status OK')
 })
 
-app.get('/get-allCustomer', (req, res) => { //app.get=run the page(req=require, res=response) shorter version of function(req,res) 
-    fs.readFile('AllCustomers.json', 'utf8', (err, data) => { //. FileSystem. readFile-function, Three arguments ('AllCustomers.json'-file path ,'utf-8'-content type, (err-parametr,data)-function what to do after file is red)
-        res.send(JSON.stringify({ 'status': 200, 'error': null, 'response': JSON.parse(data) })) //response send to server, parse-  form data  
-    })
-})
+app.get('/get-allCustomer', (req, res) => { 
+   const sqlQuery="SELECT * FROM customers";
+   con.query(sqlQuery, (error, results) => {
+    if(error)
+    throw error;
+    res.send(JSON.stringify({ 'status': 200, 'error': null, 'response': {customers: results }}))
+})})
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 app.post('/add-customer', (req, res) => { //when we add new customer, it adds to AllCustomer.json file
     const newCustomer = {

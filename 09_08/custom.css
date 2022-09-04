@@ -1,0 +1,23 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.container{
+    margin-top: 20px;
+}
+.btn{
+    border: none;
+}
+.btn2{
+    border: none;
+    color: #6c757d;
+    background-color: #ffff;
+}
+.fa-solid{
+    padding-right: 10px;
+}
+.text-dark2{
+    color: #6c757d;
+}
+.modal-content{
+    color:darkolivegreen
+}
