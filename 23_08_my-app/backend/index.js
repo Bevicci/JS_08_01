@@ -19,7 +19,7 @@ let con = mysql.createConnection({ //define connection to database
     user: "root",
     password: "",
     database: "js_08_01"
-});  
+});
 con.connect(function (err) {
     if (err) {
         console.log('Error connecting to Db');
@@ -37,40 +37,37 @@ app.get('', (req, res) => {
     res.send('Server is running, status OK')
 })
 
-app.get('/get-allCustomer', (req, res) => { 
-   const sqlQuery="SELECT * FROM customers";
-   con.query(sqlQuery, (error, results) => {
-    if(error)
-    throw error;
-    res.send(JSON.stringify({ 'status': 200, 'error': null, 'response': {customers: results }}))
-})})
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app.get('/get-allCustomer', (req, res) => { //for the GET request we do not have body, open any browser and type link=get request
+    const sqlQuery = "SELECT * FROM customers";
+    con.query(sqlQuery, (error, results) => {
+        if (error)
+            throw error;
+        res.send(JSON.stringify({ 'status': 200, 'error': null, 'response': { customers: results } }))
+    })
+})
 
-app.post('/add-customer', (req, res) => { //when we add new customer, it adds to AllCustomer.json file
+app.post('/add-customer', (req, res) => {
+    console.log(req.body)
     const newCustomer = {
-        firstname: req.body.firstname,//it comes from html file names
+        firstname: req.body.firstname,
         lastname: req.body.lastname,
         phone: req.body.phone,
-        email: req.body.email
+        email: req.body.email,
+        vip: req.body.vip == "Yes" ? 1 : 0
     };
-    fs.readFile('AllCustomers.json', 'utf8', (err, data) => { //read a file after adding customer
-        const customers = JSON.parse(data); //parse data from string to JSON(we transfer text file which we enter to js object in our nodejs file, js object)
-        customers.customers.push(newCustomer);
-        console.log(customers)
-        //we write new file
-        fs.writeFile('AllCustomers.json', JSON.stringify(customers, null, 3),//JSON.stringify-преобразует значение JavaScript в строку JSON.
-            //(value-Значение, преобразуемое в строку JSON.[, replacer=null:all properties of the object are included in the resulting JSON string.[, space]])
-            function (err) {
-                if (!err) {
-                    // res.status(201)
-                    res.send(JSON.stringify({ 'status': 201, 'error': null, 'response': 'Customer is added' }))
-                    // res.send('Customer is added') //send the response
-                } else {
-                    res.send(err)
-                }
-                //callback function, it check if there is an error in function .write file and transfer it like an object so we could work with it
-            })
+
+    const sqlQuery = "INSERT INTO customers (firstname, lastname, email, phone, vip) VALUES (?,?,?,?,?)";
+    con.query(sqlQuery, [newCustomer.firstname, newCustomer.lastname, newCustomer.email, newCustomer.phone, newCustomer.vip], 
+        (error, results) => {
+        if (error)
+            throw error;
+        res.send(JSON.stringify({
+            'status': 200,
+            'error': null,
+            'response': 'Customer ID: ' + results.insertId + ' created!'
+        }));
     })
+
 })
 app.listen(5000, () => { //port. starting the server
     console.log('Server is running on port 5000');
