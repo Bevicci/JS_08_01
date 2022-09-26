@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<head>
+
+<script src="script.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://kit.fontawesome.com/d982a44bc3.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<title> Frequently Asked Questions </title>
+</head>
+<body>
+<header>
+  <div class="header d-flex">
+    <div class="p-2" style="width: 100%"></div>
+    <div class="p-2" style="display: flex">
+        <button id="SignIn" type="button" class="btnLogin btn-outline-success" onclick="document.getElementById('id01').style.display='block'"><i class="fa-regular fa-circle-user"></i> Login</button> 
+     <a href="SignIn"> <button id="SignUp" type="button" class="btn btn-success"><i class="fa-solid fa-circle-user"></i> Sign up </button> 
+     </a>
+    </div>
+  </div> 
+  <div class="header">
+    <a href="/">
+        <img id="logo" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
+  </div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- mobile navigation -->
+    <div class="dropdown show">
+      <a class="btn btn-success dropdown-toggle navbar-toggler" onclick="openMenu()" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menu</a>
+      <div id="mobile-nav" class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="display: none">
+        <a class="dropdown-item" href="/">About Us</a>
+        <a class="dropdown-item" href="Specialists">Our Nutritionists</a>
+        <a class="dropdown-item" href="Booking">Book Now</a>
+        <a class="dropdown-item" href="Prices">Price List</a>        
+        <a class="dropdown-item" href="Contacts">Contacts</a>
+      </div>
+    </div>
+    </button>
+    <!-- web navigation -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/"> About Us </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="Specialists">
+            Our Nutritionists </a>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Booking">Book Now</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Prices">Price List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
+</nav> 
+<div>
+<!-- Login -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<!-- Content -->
+<form class="modal-content animate" action="auth/SignIn" method="POST"  style="max-width:600px;cursor:auto">
+<div class="container login">
+<div style="margin-left: 20px">
+    <label for="uname" style="margin-top: 20px"><b>Username</b></label>
+    <div><input type="text" placeholder="Enter Username" name="uname" required style="margin-bottom: 10px; width: 95%"></div>
+</div>
+<div style="margin-left: 20px">
+    <label for="psw"><b>Password</b></label>
+    <div><input type="password" placeholder="Enter Password" name="psw" required style="margin-bottom: 10px; width: 95%"></div>
+</div>
+<div style="margin-left: 20px">
+    <button type="submit" class="btn btn-success" style="margin-bottom: 10px; width: 95%">Login</button>
+    <div> <label>
+    <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 5px"> Remember me</label></div>
+</div>
+</div>
+<div style="margin-bottom: 20px; margin-left: 30px;">
+    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger" style="width: 93%">Cancel</button>
+    <p style="width: 100%;"></p>
+    <span class="psw"><a href="#">Forgot password?</a></span>
+</div>
+<div style="margin-bottom: 20px; margin-left: 30px"><span class="psw">If you don't have a profile yet, please <a href="SignIn">Sign up!</a></span></div>
+</form>
+</div>
+<!-- Login -->
+</header>
+
+<div class="content" style="margin-top: 50px;">
+<h3> Frequently Asked Questions </h3>
+<div id="accordion" class="Questions">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          How do I book an appointment?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        You can book your appointment online <a href="Booking" >here</a> or by writing an e-mail to info@NourishmentZone.lv. Please note if your health insurance has nutritionist consultations included in the program.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Do you take insurance patients?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        Yes, we accept patients from all major insurance companies. If you wish to book in with your insurance company, please e-mail us with your membership number at the time of booking. 
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What if I need other tests or treatments?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        If you require additional investigations or treatment (e.g. medications), we will write to your personal doctor or consultant. If you prefer, we can recommend a trusted private medical colleague. We don’t believe taking commission for referrals or ordering tests so you can rest assured that our recommendations will be based on the treatment that we believe is best for you.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed " data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Which dietitian should I see?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        If you have read the <a href="Specialists">information about our dietitians</a> and you’re not sure who will be right for you, please e-mail or call us and we be happy to advise you. 
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What can I expect from my appointment?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        Initial Consultations are booked for up to 90 minutes and will include a full assessment of your medical history, lifestyle and dietary habits and we will reach a nutritional diagnosis. You will be sent a Nutritional Treatment Plan and any other resources you may need after the consultation.
+        Follow-up consultations will involve reviewing your treatment and offering ongoing support in implementation or adaptation of your plan.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What if I book and change my mind or can’t make the appointment?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        If will not attent the appointment, contact us by phone +371 24 057 167 or e-mail info@NourishmentZone.lv. We require 24 hours notice for cancellations. Cancellations within 48 hours of the appointment will be charged at 100% of the cost of the appointment. 
+        We understand that many of our patients have complex medical needs, so if you have a medical emergency or a valid reason for cancelling/not attending, please contact us.
+      </div>
+  </div>
+
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="footer"> 
+  <div class="d-flex">
+    <div class="mr-auto p-2" style="width: 100%">
+      <a href="/">
+        <img id="logofooter" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
+    </div>
+    <div class="p-2 footText" style="width: 500px;">
+      <p>CUSTOMER SERVICE</p>
+      <a href="Questions" class="nicelinks">Frequently Asked Questions</a>
+      <a href="Privacy" class="nicelinks">Privacy Policy</a>
+      <a href="Terms" class="nicelinks">Terms & Conditions</a>
+      <a href="Contacts" class="nicelinks">Contact Us</a>
+    </div>
+    <div class="p-2 footText" style="width: 500px;">
+      <p class="footText">CONTACTS</p>
+      <p class="footText">Veselības Iela 20, Rīga</p>
+      <p class="footText">Phone: +371 24 057 167</p>
+      <p class="footText">info@NourishmentZone.lv</p>
+      <a href="https://www.instagram.com/" class="nicelinks">Instagram</a>
+    </div>
+    <div class="p-2 footText" style="width: 500px;">
+      <p class="footText">WORKING HOURS</p>
+      <p class="footText"> Monday - Friday:</p>
+      <p class="footText">8:00 - 20:00</p>
+      <p class="footText">Saturday, Sunday:</p>
+      <p class="footText">Days off</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

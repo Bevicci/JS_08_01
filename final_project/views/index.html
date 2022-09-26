@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/d982a44bc3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title> About us </title>
+</head>
+
+<body>
+  <header>
+    <div class="header d-flex">
+      <div class="p-2" style="width: 100%"></div>
+      <div class="p-2" style="display: flex">
+        <button id="SignIn" type="button" class="btnLogin btn-outline-success"
+          onclick="document.getElementById('id01').style.display='block'"><i class="fa-regular fa-circle-user"></i>
+          Login</button>
+        <a href="SignIn"> <button id="SignUp"
+            type="button" class="btn btn-success"><i class="fa-solid fa-circle-user"></i> Sign up </button>
+        </a>
+      </div>
+    </div>
+    </div>
+    <div class="header">
+      <a href="/">
+        <img id="logo" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- mobile navigation -->
+      <div class="dropdown show">
+        <a class="btn btn-success dropdown-toggle navbar-toggler" onclick="openMenu()" role="button"
+          id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu</a>
+        <div id="mobile-nav" class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="display: none">
+          <a class="dropdown-item" href="/">About Us</a>
+          <a class="dropdown-item" href="Specialists">Our Nutritionists</a>
+          <a class="dropdown-item" href="Booking">Book Now</a>
+          <a class="dropdown-item" href="Prices">Price List</a>
+          <a class="dropdown-item" href="Contacts">Contacts</a>
+        </div>
+      </div>
+      </button>
+      <!-- web navigation -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">
+              About Us <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Specialists">
+              Our Nutritionists </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Booking">Book
+              Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Prices">Price
+              List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+              href="Contacts">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Login -->
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+      <!-- Content -->
+      <form class="modal-content animate" action="/auth/SignIn" method="POST" style="max-width:600px;cursor:auto">
+        <div class="container login">
+          <div style="margin-left: 20px">
+            <label for="uname" style="margin-top: 20px"><b>Email</b></label>
+            <div><input type="text" placeholder="Enter Username" name="uname" required
+                style="margin-bottom: 10px; width: 95%"></div>
+          </div>
+          <div style="margin-left: 20px">
+            <label for="psw"><b>Password</b></label>
+            <div><input type="password" placeholder="Enter Password" name="psw" required
+                style="margin-bottom: 10px; width: 95%"></div>
+          </div>
+          <div style="margin-left: 20px">
+            <button type="submit" class="btn btn-success" style="margin-bottom: 10px; width: 95%">Login</button>
+            <div> <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 5px"> Remember me</label>
+            </div>
+          </div>
+        </div>
+        <div style="margin-bottom: 20px; margin-left: 30px;">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger"
+            style="width: 93%">Cancel</button>
+          <p style="width: 100%;"></p>
+          <span class="psw"><a href="#">Forgot password?</a></span>
+        </div>
+        <div style="margin-bottom: 20px; margin-left: 30px"><span class="psw">If you don't have a profile yet, please <a
+              href="SignIn">Sign up!</a></span>
+        </div>
+      </form>
+    </div>
+    <!-- Login -->
+  </header>
+
+  <div class="content">
+    <div class="d-flex" style="margin-top: 50px;">
+      <div class="mr-auto p-2">
+        <img id="about_us" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/greens.jpg">
+      </div>
+      <div class="mr-auto p-2 align-self-center left-marg" style="width: 100%">
+        <h4 class="centered">ABOUT</h4>
+        <p class="justified">
+          With the services of a nutritionist, you will be provided with information on how to improve your menu,
+          prepare food to maintain its nutritional value, improve your well-being and strengthen immunity. During the
+          consultation, myths and prejudices about eating habits and unhealthy foods will be dispelled.
+        </p>
+        <p class="justified">
+          Our Registered Nutritionist is dedicated to helping you achieve your health and nutrition goals.
+        </p>
+        <p class="justified">
+          Our Registered Nutritionist has experience in various areas, including:
+        </p>
+        <ul class="justified">
+          <li>Eating Disorders and Disordered Eating</li>
+          <li>Mental Health</li>
+          <li>Mindful and Intuitive Eating</li>
+          <li>Vegetarian and Vegan Diets</li>
+          <li>Exercise Nutrition</li>
+          <li>Heart Health, Heart Disease, Cholesterol Management</li>
+          <li>Diabetes (Type II, Pre-diabetes, Gestational)</li>
+          <li>Pregnancy Nutrition</li>
+        </ul>
+        <p class="justified">
+          During the first familiarization appointment, the nutritionist will find out all the necessary information
+          about your medical history, eating habits, as well as perform diagnostic measurements and examinations. With
+          the help of professional bioimpedance scales, body fat and bone and muscle mass will be determined with the
+          aim of diagnosing problems that need increased attention.
+        </p>
+      </div>
+    </div>
+    <div class="d-flex" style="margin-top: 50px; margin-bottom: 50px;">
+      <div class="mr-auto p-2 align-self-center" style="width: 100%;">
+        <h4 class="centered">Available Services:</h4>
+        <p class="centered">Nutrition Counselling Assessment (90 minutes)</p>
+        <p class="centered">Eating Disorders Initial Assessment (90 minutes)</p>
+        <p class="centered">Follow-Up Appointments (30 minutes or 60 minutes)</p>
+        <p class="centered">Online counselling available through Zoom/FaceTime</p>
+      </div>
+      <div class="p-2">
+        <img id="pic_horiz" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/services.jpg">
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="d-flex">
+      <div class="mr-auto p-2 align-self-center" style="width: 100%">
+        <a href="/">
+          <img id="logofooter" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
+      </div>
+      <div class="p-2 footText" style="width: 390px;">
+        <p>CUSTOMER SERVICE</p>
+        <a href="Questions"
+          class="nicelinks">Frequently Asked Questions</a>
+        <a href="Privacy" class="nicelinks">Privacy
+          Policy</a>
+        <a href="Terms" class="nicelinks">Terms &
+          Conditions</a>
+        <a href="Contacts"
+          class="nicelinks">Contact Us</a>
+      </div>
+      <div class="p-2 footText" style="width: 390px;">
+        <p class="footText">CONTACTS</p>
+        <p class="footText">Veselības Iela 20, Rīga</p>
+        <p class="footText">Phone: +371 24 057 167</p>
+        <p class="footText">info@NourishmentZone.lv</p>
+        <a href="https://www.instagram.com/" class="nicelinks">Instagram</a>
+      </div>
+      <div class="p-2 footText" style="width: 390px;">
+        <p class="footText">WORKING HOURS</p>
+        <p class="footText"> Monday - Friday:</p>
+        <p class="footText">8:00 - 20:00</p>
+        <p class="footText">Saturday, Sunday:</p>
+        <p class="footText">Days off</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>
