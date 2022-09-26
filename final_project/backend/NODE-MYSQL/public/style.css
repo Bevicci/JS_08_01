@@ -1,0 +1,491 @@
+.card{
+    background-color: rgba(142, 202, 145, 0.308);
+}
+/* Annimations for services cards buttons */
+
+  .card button:hover {
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+
+.mb-4{
+    color: rgb(82, 82, 82);
+}
+.btn{
+    color: rgb(228, 228, 228);
+    background-color:darkolivegreen;
+    border: none;
+}
+.form-check-input:checked {
+    background-color: darkolivegreen;
+    border-color: darkolivegreen;
+}
+
+/* mobile */
+@media only screen and (max-width: 500px) {
+    div.header {
+      margin-left: 0px;
+      margin-right: 0px;
+      display: flex!important;}
+    .centered{
+        text-align: center;
+        width: 95vw;}  
+  
+    .footer {
+      margin:0px;
+      display: block;}
+    div.d-flex{
+      display: block!important;  }
+  
+    div.content {
+      margin-left: 5px;
+      margin-right: 5px;
+      display: block;    }
+  
+    #logo{
+      width: 95vw;
+      height: auto;
+      margin-top: 20px;
+      margin-bottom: 60px;}
+  
+    img{display: block;}
+    .prices {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 260px;}
+    .spec_book{
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 315px;
+    }
+    .specialists{
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 315px;
+    }
+    #pic{display: none;}
+    #about_us{
+      width: 95vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #pic_horiz{
+      height: auto;
+      width: 95vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .left-marg{
+      margin-left: 0px
+    }
+    .spec_book_mob {
+      display: block;
+      width: 90vw;
+    }
+    .subj-book-mob{
+      display: block;
+      width: 90vw;
+    }
+    .date-book-mob{
+      display: block;
+      width: 90vw;
+    }
+    .subj-book{
+      display: none;
+    }
+    .subject{
+      display: none;
+    }
+    .spec_book{
+      display: none;
+    }
+    .date-book{
+      display: none;
+    }
+    #map-mob{
+      display: block;
+      margin-left:0px
+    }
+    #map{
+      display: none;
+    }
+    div.contacts{
+      display: block;
+      width: 55vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #pers_info{
+      width: 95vw;
+      background-color: #f8f9fa;
+      padding: 10px;
+      text-align: center;  }
+  
+    .appointments{
+      margin-left: 0px;
+      width: 95vw  ;
+      margin-top: 50px; }
+    div.signup{
+      width: 100vw;
+    }
+    .Questions{
+      width: 95vw;
+      text-align: justify;
+    }
+  }
+      
+  /* desktop */
+  @media (min-width:500px){
+    div.signup{
+      width: 600px;
+    }
+    .message{
+      display: block; 
+      margin-top: 50px;
+      width: 800px
+    }
+    div.content{
+      margin-left: 150px;
+      margin-right: 150px  }
+  
+    .navbar-nav{
+      margin-left: 150px;
+      margin-right: 150px}
+  
+    .footer{
+      background-color: #ffffff;
+      margin-left: 150px;
+      margin-right: 150px;
+      margin-top: 50px;
+      margin-bottom: 10px;
+      border-top: solid 1px rgba(0,0,0,.125);  }
+    * {box-sizing: border-box}
+    .prices{
+      display:flex;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;  }
+    .specialists{
+      display:flex;
+    }
+    .spec_book{
+      display:flex;
+    }
+    #about_us{
+      height: auto;
+      width: 500px;
+    }
+    #pic_horiz{
+      height: auto;
+      width: 700px;
+    }
+    .left-marg{
+      margin-left: 50px
+    }
+    .spec_book_mob {
+      display: none;
+    }
+    .subj-book-mob{
+      display: none;
+    }
+    .date-book-mob{
+      display: none;
+    }
+    .spec_book{
+      display: flex;
+    }
+    .subj-book{
+      display: flex;
+    }
+    .subject{
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      display: flex;
+    }
+    .date-book{
+      display: block;
+    }
+    #map-mob{
+      display: none;
+    }
+    #map{
+      display: block;
+    }
+    div.contacts{
+      display: flex}
+  
+    #pers_info{
+      width: 40%;
+      background-color: #f8f9fa;
+      padding: 10px;
+      text-align: center;  }
+  
+    .appointments{
+      margin-left: 30px;
+      width: 90%;   }
+  }
+    /* general */
+    #book-pic{
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  p.space{
+    margin-bottom: 50px;}
+  .header{
+    margin-left: 150px;
+    margin-right: 150px;}
+  .nav{
+      text-align:center;
+      display: flex;
+      flex-basis: auto;
+      height: 100%;
+      width: 100%}
+  #logo{
+    height:100px;
+    margin-top: 20px;
+    margin-bottom: 60px;}
+  #logofooter{
+    height:100px;
+    margin-top: 20px;
+    margin-bottom: 60px;}
+  div.card{
+      margin: 10px;
+      cursor: pointer}
+  div.cardprices{
+      margin: 10px;
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: 0.25rem;}
+  .bbtn{
+    margin-bottom: 30px;
+  }
+  .btnLogin{
+    background-color: white;
+    border-style: none;
+  }
+  
+  h5.card-title{
+    text-align: center;
+    color:#198754;
+    margin: 0px;
+    vertical-align: middle;
+  }
+  .title{
+    text-align: center;
+    color:#000000;
+    margin-bottom: 20px;
+    vertical-align: middle;
+  }
+  p.card-title{
+    text-align: center;
+    color:#198754;
+    margin: 0px;
+    vertical-align: middle;
+  }
+  
+  #calendar{
+    width: 600px;
+    height: auto;
+  }
+  #time{
+    width: 30%;
+    height: auto;
+  }
+  .timebtn{
+    margin: 5px;
+  }
+  button#book{
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px; 
+    width: 100px
+  }
+  .prices{
+    text-align: center;
+  }
+  p.justified{
+      text-align: justify;}
+  ul.justified {
+    list-style: none}
+  p.card-text{text-align: center}
+  h5.prices{
+    margin-bottom: 20px;
+  }
+  .centered{
+    text-align: center
+  }
+  .map-container{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+      }
+  .map-container iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;    }
+  
+  div.footText{
+    text-align: center;
+    width: 390px!important;
+  }
+  p.footText{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    clear: both;
+    overflow: hidden;
+    white-space: nowrap; 
+  }
+  a.nicelinks{
+    text-decoration: none;
+    color: #000;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 16px;
+  }
+  #pic{
+    height: auto;
+    width: 100%}
+  
+  .chosen{
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+  }
+  
+  /* profile info */
+  #prof_pic{
+    width: 360px;}
+  .logout{
+    display: block;
+    margin-top: 50px;
+  }
+  
+  .appointments h4{
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #e0e0e0;
+    text-transform: uppercase;
+  }
+  .appointments_data{
+    display:block;
+    justify-content: space-between;
+  }
+  button.btn-link{
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /*  */
+  button#SignIn {
+    margin-left: 0px;
+    margin-right: 0px;
+    display: inline;
+    width: 100px;
+    color: #198754;
+    text-decoration: none;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;}
+  button#SignUp{
+    margin-left: 0px;
+    margin-right: 0px;
+    display: inline;
+    width: 100px;
+    text-decoration: none;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;}
+  /* Login */
+  .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0,0.4); 
+      padding-top: 60px;  }
+    
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5px auto; 
+      border: 1px solid #888;
+      width: 80%;   }
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;  }
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;  }
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s  }
+    
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)}
+      to {-webkit-transform: scale(1)}  }
+    
+    @keyframes animatezoom {
+      from {transform: scale(0)}
+      to {transform: scale(1)}  }
+  
+  div.login{ 
+      border: 5px;
+      display: block;}
+  * {box-sizing: border-box}
+  
+  /* Sign up*/
+  input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;  }
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;  }
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;  }
+    button:hover {
+      opacity:1;  }
+    .cancel {
+      padding: 14px 20px;  }
+    button.cancel {
+      width: 49%;
+    }
+    button.signup{
+      width: 49%;
+    }
+    .container {
+      padding: 16px;  }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;  }
+    /* Sign up*/
+
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/d982a44bc3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../public/style.css">
+  <script src="script.js"></script>
+  <title> Sign up </title>
+</head>
+
+<body>
+  <header>
+    <div class="header d-flex">
+      <div class="p-2" style="width: 100%"></div>
+      <div class="p-2" style="display: flex">
+        <button id="SignIn" type="button" class="btnLogin btn-outline-success"
+          onclick="document.getElementById('id01').style.display='block'"><i class="fa-regular fa-circle-user"></i>
+          Login</button>
+        <a href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/SignIn.html"> <button id="SignUp"
+            type="button" class="btn btn-success"><i class="fa-solid fa-circle-user"></i> Sign up </button>
+        </a>
+      </div>
+    </div>
+    <div class="header">
+      <a href="https://sigitagavare.github.io/Practical_tasks/Final_task/index.html">
+        <img id="logo" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- mobile navigation -->
+      <div class="dropdown show">
+        <a class="btn btn-success dropdown-toggle navbar-toggler" onclick="openMenu()" role="button"
+          id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu</a>
+        <div id="mobile-nav" class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="display: none">
+          <a class="dropdown-item" href="https://sigitagavare.github.io/Practical_tasks/Final_task/index.html">About
+            Us</a>
+          <a class="dropdown-item"
+            href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Specialists.html">Our
+            Nutritionists</a>
+          <a class="dropdown-item"
+            href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Booking.html">Book Now</a>
+          <a class="dropdown-item"
+            href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Prices.html">Price List</a>
+          <a class="dropdown-item"
+            href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Contacts.html">Contacts</a>
+        </div>
+      </div>
+      </button>
+      <!-- web navigation -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://sigitagavare.github.io/Practical_tasks/Final_task/index.html"> About Us
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Specialists.html">
+              Our Nutritionists </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Booking.html">Book
+              Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Prices.html">Price
+              List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+              href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Contacts.html">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div>
+      <!-- Login -->
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <!-- Content -->
+        <form class="modal-content animate" style="max-width:600px;cursor:auto">
+          <div class="container login" id="login">
+            <div style="margin-left: 20px">
+              <label for="uname" style="margin-top: 20px"><b>Username</b></label>
+              <div><input type="text" placeholder="Enter Username" id="uname" name="uname" required
+                  style="margin-bottom: 10px; width: 95%"></div>
+            </div>
+            <div style="margin-left: 20px">
+              <label for="psw"><b>Password</b></label>
+              <div><input type="password" placeholder="Enter Password" id="psw" name="psw" required
+                  style="margin-bottom: 10px; width: 95%"></div>
+            </div>
+            <div style="margin-left: 20px">
+              <button type="submit" class="btn btn-success" style="margin-bottom: 10px; width: 95%"
+                onclick="loginUser()">Login</button>
+              <div> <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 5px"> Remember
+                  me</label></div>
+            </div>
+          </div>
+          <div style="margin-bottom: 20px; margin-left: 30px;">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger"
+              style="width: 93%">Cancel</button>
+            <p style="width: 100%;"></p>
+            <span class="psw"><a href="#">Forgot password?</a></span>
+          </div>
+          <div style="margin-bottom: 20px; margin-left: 30px"><span class="psw">If you don't have a profile yet, please
+              <a href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/SignIn.html">Sign up!</a></span>
+          </div>
+        </form>
+      </div>
+      <!-- Login -->
+  </header>
+
+  <!-- Sign up -->
+  <form>
+    <div class="container signup" id="reg-form" style="margin-top: 50px">
+      <h4 class="centered">SIGN UP</h4>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" id="email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" id="repeat" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:20px"> Remember me
+      </label>
+
+      <p style="margin-bottom:20px">By creating an account you agree to our <a
+          href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Terms.html"
+          style="color:dodgerblue">Terms & Conditions</a>.</p>
+
+      <div class="clearfix" style="margin-bottom: 30px">
+        <a href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/profile.html" type="submit" class="btn btn-success signup" onclick="registerUser()">Sign
+          Up</a>
+        <a href="index.html" type="button" class="btn btn-danger cancel">Cancel</a>
+      </div>
+    </div>
+  </form>
+  <!-- Sign up -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="d-flex">
+      <div class="mr-auto p-2" style="width: 100%">
+        <a href="https://sigitagavare.github.io/Practical_tasks/Final_task/index.html">
+          <img id="logofooter" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
+      </div>
+      <div class="p-2 footText" style="width: 500px;">
+        <p>CUSTOMER SERVICE</p>
+        <a href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Questions.html"
+          class="nicelinks">Frequently Asked Questions</a>
+        <a href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Privacy.html" class="nicelinks">Privacy
+          Policy</a>
+        <a href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Terms.html" class="nicelinks">Terms &
+          Conditions</a>
+        <a href="https://sigitagavare.github.io/Practical_tasks/Final_task/Pages/Contacts.html"
+          class="nicelinks">Contact Us</a>
+      </div>
+      <div class="p-2 footText" style="width: 500px;">
+        <p class="footText">CONTACTS</p>
+        <p class="footText">Veselības Iela 20, Rīga</p>
+        <p class="footText">Phone: +371 24 057 167</p>
+        <p class="footText">info@NourishmentZone.lv</p>
+        <a href="https://www.instagram.com/" class="nicelinks">Instagram</a>
+      </div>
+      <div class="p-2 footText" style="width: 500px;">
+        <p class="footText">WORKING HOURS</p>
+        <p class="footText"> Monday - Friday:</p>
+        <p class="footText">8:00 - 20:00</p>
+        <p class="footText">Saturday, Sunday:</p>
+        <p class="footText">Days off</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
