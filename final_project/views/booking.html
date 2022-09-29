@@ -1,263 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta charset="utf-8"/>
-<head>
-<script src="script.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://kit.fontawesome.com/d982a44bc3.js" crossorigin="anonymous"></script>
-<link href='https://sigitagavare.github.io/Practical_tasks\Final_task\content\calendar\main.css' rel='stylesheet' />
-<script src='https://sigitagavare.github.io/Practical_tasks\Final_task\content\calendar\main.js'></script>
-<link rel="stylesheet" href="style.css">
-<title> Book online </title>
-</head>
-<body>
-<header>
-  <div class="header d-flex">
-    <div class="p-2" style="width: 100%"></div>
-    <div class="p-2" style="display: flex">
-        <button id="SignIn" type="button" class="btnLogin btn-outline-success" onclick="document.getElementById('id01').style.display='block'"><i class="fa-regular fa-circle-user"></i> Login</button> 
-     <a href="SignIn"> <button id="SignUp" type="button" class="btn btn-success"><i class="fa-solid fa-circle-user"></i> Sign up </button> 
-     </a>
-    </div>
-  </div> 
-  <div class="header">
-    <a href="/">
-        <img id="logo" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
-  </div>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- mobile navigation -->
-    <div class="dropdown show">
-      <a class="btn btn-success dropdown-toggle navbar-toggler" onclick="openMenu()" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Menu</a>
-      <div id="mobile-nav" class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="display: none">
-        <a class="dropdown-item" href="/">About Us</a>
-        <a class="dropdown-item" href="Specialists">Our Nutritionists</a>
-        <a class="dropdown-item" href="Booking">Book Now</a>
-        <a class="dropdown-item" href="Prices">Price List</a>        
-        <a class="dropdown-item" href="Contacts">Contacts</a>
+<head>
+  <script src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/d982a44bc3.js" crossorigin="anonymous"></script>
+  <link href='https://sigitagavare.github.io/Practical_tasks\Final_task\content\calendar\main.css' rel='stylesheet' />
+  <script src='https://sigitagavare.github.io/Practical_tasks\Final_task\content\calendar\main.js'></script>
+  <link rel="stylesheet" href="style.css">
+  <title> Book online </title>
+</head>
+
+<body>
+  <header>
+    <div class="header d-flex">
+      <div class="p-2" style="width: 100%"></div>
+      <div class="p-2" style="display: flex">
+        <button id="SignIn" type="button" class="btnLogin btn-outline-success"
+          onclick="document.getElementById('id01').style.display='block'"><i class="fa-regular fa-circle-user"></i>
+          Login</button>
+        <a href="SignIn"> <button id="SignUp" type="button" class="btn btn-success"><i
+              class="fa-solid fa-circle-user"></i> Sign up </button>
+        </a>
       </div>
     </div>
-    </button>
-    <!-- web navigation -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/"> About Us </a>
-        </li>
-        <li class="nav-item dropdown">
+    <div class="header">
+      <a href="/">
+        <img id="logo" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- mobile navigation -->
+      <div class="dropdown show">
+        <a class="btn btn-success dropdown-toggle navbar-toggler" onclick="openMenu()" role="button"
+          id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu</a>
+        <div id="mobile-nav" class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="display: none">
+          <a class="dropdown-item" href="/">About Us</a>
+          <a class="dropdown-item" href="Specialists">Our Nutritionists</a>
+          <a class="dropdown-item" href="Booking">Book Now</a>
+          <a class="dropdown-item" href="Prices">Price List</a>
+          <a class="dropdown-item" href="Contacts">Contacts</a>
+        </div>
+      </div>
+      </button>
+      <!-- web navigation -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/"> About Us </a>
+          </li>
+          <li class="nav-item dropdown">
             <a class="nav-link" href="Specialists">
               Our Nutritionists </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="Booking"> Book Now <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Prices">Price List</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Contacts">Contacts</a>
-        </li>
-      </ul>
-    </div>
-</nav> 
-<div>
-<!-- Login -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-<!-- Content -->
-<form class="modal-content animate" action="auth/SignIn" method="POST" style="max-width:600px; cursor:auto">
-<div class="container login">
-<div style="margin-left: 20px">
-    <label for="uname" style="margin-top: 20px"><b>Username</b></label>
-    <div><input type="text" placeholder="Enter Username" name="uname" required style="margin-bottom: 10px; width: 95%"></div>
-</div>
-<div style="margin-left: 20px">
-    <label for="psw"><b>Password</b></label>
-    <div><input type="password" placeholder="Enter Password" name="psw" required style="margin-bottom: 10px; width: 95%"></div>
-</div>
-<div style="margin-left: 20px">
-    <button type="submit" class="btn btn-success" style="margin-bottom: 10px; width: 95%">Login</button>
-    <div> <label>
-    <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 5px"> Remember me</label></div>
-</div>
-</div>
-<div style="margin-bottom: 20px; margin-left: 30px;">
-    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger" style="width: 93%">Cancel</button>
-    <p style="width: 100%;"></p>
-    <span class="psw"><a href="#">Forgot password?</a></span>
-</div>
-<div style="margin-bottom: 20px; margin-left: 30px"><span class="psw">If you don't have a profile yet, please <a href="SignIn">Sign up!</a></span></div>
-</form>
-</div>
-<!-- Login -->  
-</header>
-
-<div class="content">
-<div> 
-  <h4 class="centered" style="margin-top: 50px;"> Choose your specialist:</h4>
-<div class="spec_book">
-  <div class="card" id="zalite" style="width: 18rem;">
-      <div class="card-body" onclick="setFromDiv(this, 'specialist', '.card-title-spec')" >
-        <h5 class="card-title-spec">MĀRA ZĀLĪTE</h5>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Booking"> Book Now <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Prices">Price List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts">Contacts</a>
+          </li>
+        </ul>
       </div>
-      <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/Mara_Zalite.jpg" alt="Mara Zalite">
+    </nav>
+    <div>
+      <!-- Login -->
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <!-- Content -->
+        <form class="modal-content animate" action="auth/SignIn" method="POST" style="max-width:600px; cursor:auto">
+          <div class="container login">
+            <div style="margin-left: 20px">
+              <label for="uname" style="margin-top: 20px"><b>Username</b></label>
+              <div><input type="text" placeholder="Enter Username" name="uname" required
+                  style="margin-bottom: 10px; width: 95%"></div>
+            </div>
+            <div style="margin-left: 20px">
+              <label for="psw"><b>Password</b></label>
+              <div><input type="password" placeholder="Enter Password" name="psw" required
+                  style="margin-bottom: 10px; width: 95%"></div>
+            </div>
+            <div style="margin-left: 20px">
+              <button type="submit" class="btn btn-success" style="margin-bottom: 10px; width: 95%">Login</button>
+              <div> <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 5px"> Remember
+                  me</label></div>
+            </div>
+          </div>
+          <div style="margin-bottom: 20px; margin-left: 30px;">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger"
+              style="width: 93%">Cancel</button>
+            <p style="width: 100%;"></p>
+            <span class="psw"><a href="#">Forgot password?</a></span>
+          </div>
+          <div style="margin-bottom: 20px; margin-left: 30px"><span class="psw">If you don't have a profile yet, please
+              <a href="SignIn">Sign up!</a></span></div>
+        </form>
+      </div>
+      <!-- Login -->
+  </header>
+
+  <div class="content">
+    <div>
+      <h4 class="centered" style="margin-top: 50px;"> Choose your specialist:</h4>
+      <div class="spec_book">
+        <div class="card" id="zalite" style="width: 18rem;">
+          <div class="card-body" onclick="setFromDiv(this, 'specialist', '.card-title-spec')">
+            <h5 class="card-title-spec">MĀRA ZĀLĪTE</h5>
+          </div>
+          <img class="card-img-top"
+            src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/Mara_Zalite.jpg" alt="Mara Zalite">
+        </div>
+
+        <div class="card" id="lapa" onclick="setFromDiv(this, 'specialist', '.card-title-spec')" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title-spec">MAIJA LAPA</h5>
+          </div>
+          <img class="card-img-top"
+            src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/Maija_Lapa.jpg" alt="Maija Lapa">
+        </div>
+
+        <div class="card" id="raks" onclick="setFromDiv(this, 'specialist', '.card-title-spec')" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title-spec">MĀRTIŅŠ RAKS</h5>
+          </div>
+          <img class="card-img-top"
+            src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/Martins_Raks.jpg" alt="Martins Raks">
+        </div>
+
+        <div class="card" id="kolava" onclick="setFromDiv(this, 'specialist', '.card-title-spec')"
+          style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title-spec">JEKATERINA KOLAVA</h5>
+          </div>
+          <img class="card-img-top"
+            src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/Jekaterina_Kolava.jpg"
+            alt="Jekaterina Kolava">
+        </div>
+
+      </div>
+      <div class="spec_book_mob">
+        <select class="custom-select form-select" id="mob-spec">
+          <option selected>Choose your specialist:</option>
+          <option value="Māra Zālīte">Māra Zālīte</option>
+          <option value="Maija Lapa">Maija Lapa</option>
+          <option value="Mārtiņš Raks">Mārtiņš Raks</option>
+          <option value="Jekaterina Kolava">Jekaterina Kolava</option>
+        </select>
+      </div>
+      <h4 class="centered" style="margin-top: 50px;"> Choose appointment subject:</h4>
+      <div class="subject subj-book">
+
+        <div class="card" onclick="setFromDiv(this, 'subject', '.title')" style="width: 15rem;">
+          <div class="card-body">
+            <p class="title">Initial Nutrition Counseling Assessment (90 min)</p>
+          </div>
+          <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/sub_1.jpg">
+        </div>
+
+        <div class="card" onclick="setFromDiv(this, 'subject', '.title')" style="width: 15rem;">
+          <div class="card-body">
+            <p class="title">Eating Disorder Initial Assessment (90 min)</p>
+          </div>
+          <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/sub_2.jpg">
+        </div>
+        <div class="card" onclick="setFromDiv(this, 'subject', '.title')" style="width: 15rem;">
+          <div class="card-body">
+            <p class="title">Follow-Up Appointment (30 or 60 min)</p>
+          </div>
+          <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/sub_3.jpg">
+        </div>
+        <div class="card" onclick="setFromDiv(this, 'subject', '.title')" style="width: 15rem;">
+          <div class="card-body">
+            <p class="title">Online Consultations</p>
+          </div>
+          <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/sub_4.jpg">
+        </div>
+      </div>
+      <div class="subj-book-mob">
+        <select class="custom-select form-select" id="mob-subj">
+          <option selected>Choose appointment subject:</option>
+          <option value="Initial Nutrition Counseling Assessment">Initial Nutrition Counseling Assessment (90 min)
+          </option>
+          <option value="Eating Disorder Initial Assessment">Eating Disorder Initial Assessment (90 min)</option>
+          <option value="Follow-Up Appointment">Follow-Up Appointment (30 or 60 min)</option>
+          <option value="Online Consultations">Online Consultations</option>
+        </select>
+      </div>
+
+      <h4 class="centered" style="margin-top: 50px;"> Choose appointment date:</h4>
+      <div class="date-book">
+        <form >
+          <label for="appointment" style="margin-top: 20px;">Choose appointment date: </label>
+          <input class="m-datepicker" type="date" id="appointment" name="appointment">
+        </form>
+        <label for="timepicker" style="margin-top: 20px;">Choose appointment time: </label>
+        <input id="timepicker" type="time" />
+      </div>
+
+      <div class="date-book-mob">
+        <form style="margin-top: 20px;">
+          <label for="appointment">Choose appointment date: </label>
+          <input type="date" id="appointment_mob" name="appointment">
+        </form>
+        <label for="timepicker" style="margin-top: 20px;">Choose appointment time: </label>
+        <input id="timepicker" type="time" />
+      </div>
+
+      <button class="btn btn-success" id="choose" style="margin-top: 20px;" .style.display='block'
+        onclick="setTime()">Choose</button>
     </div>
 
-  <div class="card" id="lapa" onclick="setFromDiv(this, 'specialist', '.card-title-spec')"style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title-spec">MAIJA LAPA</h5>
+    <!-- Need to be send to server -->
+    <div style="margin-top: 30px;">
+        <h5> Your appointment information:</h5>
+        <p>Specialist: <span id="specialist"></span></p>
+        <p>Subject: <span id="subject"></span></p>
+        <p>Time: <span id="time"></span></p>
+
+      <button class="btn btn-success" id="book" style="margin-top: 50px;"
+        onclick="setAppointment()"> Book!</button>
+      <div id="book-success" class="modal">
+        <span onclick="document.getElementById('book-success').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <!-- Content -->
+        <form class="modal-content animate" action="/action_page.php" style="max-width:600px; cursor:auto">
+          <div class="container login">
+            <div style="margin-left: 20px">
+              <img id="book-pic"
+                src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/background.jpg" />
+              <h4 class="centered"> Your booking was successful!</h4>
+              <p class="centered"> You will receive an e-mail after your specialist has approved your appointment.</p>
+            </div>
+            <div style="margin-bottom: 20px; margin-left: 30px;">
+              <button type="button" onclick="document.getElementById('book-success').style.display='none'"
+                class="btn btn-success" style="width: 93%">Return</button>
+            </div>
+        </form>
       </div>
-      <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/Maija_Lapa.jpg" alt="Maija Lapa">
     </div>
-
-  <div class="card" id="raks" onclick="setFromDiv(this, 'specialist', '.card-title-spec')" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title-spec">MĀRTIŅŠ RAKS</h5>
-      </div>
-      <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/Martins_Raks.jpg" alt="Martins Raks">
+    <div class="centered">
+      <p class="centered" style="margin-top: 50px;">Please cancel, confirm or change the booking at least 24h before the
+        appointment.</p>
+      <p class="centered">Arrive at your appointment on time and without guests. Make sure you have your ID card or
+        passport.</p>
+      <p class="centered">If you will be running late please contact us in time.</p>
     </div>
-
-  <div class="card" id="kolava" onclick="setFromDiv(this, 'specialist', '.card-title-spec')" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title-spec">JEKATERINA KOLAVA</h5>
-      </div>
-      <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/Jekaterina_Kolava.jpg" alt="Jekaterina Kolava">
-    </div>
-
-</div>
-<div class="spec_book_mob">
-  <select class="custom-select form-select" id="mob-spec">
-    <option selected>Choose your specialist:</option>
-    <option value="Māra Zālīte">Māra Zālīte</option>
-    <option value="Maija Lapa">Maija Lapa</option>
-    <option value="Mārtiņš Raks">Mārtiņš Raks</option>
-    <option value="Jekaterina Kolava">Jekaterina Kolava</option>
-  </select>
-</div>
-<h4 class="centered" style="margin-top: 50px;"> Choose appointment subject:</h4>
-<div class="subject subj-book">
-
-  <div class="card" onclick="setFromDiv(this, 'subject', '.title')" style="width: 15rem;">
-      <div class="card-body">
-        <p class="title">Initial Nutrition Counseling Assessment (90 min)</p>
-      </div>
-      <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/sub_1.jpg">
   </div>
 
-  <div class="card" onclick="setFromDiv(this, 'subject', '.title')" style="width: 15rem;">
-      <div class="card-body">
-        <p class="title">Eating Disorder Initial Assessment (90 min)</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="d-flex">
+      <div class="mr-auto p-2" style="width: 100%">
+        <a href="/">
+          <img id="logofooter" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
       </div>
-      <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/sub_2.jpg">
-    </div>
-  <div class="card" onclick="setFromDiv(this, 'subject', '.title')" style="width: 15rem;">
-      <div class="card-body">
-        <p class="title">Follow-Up Appointment (30 or 60 min)</p>
+      <div class="p-2 footText" style="width: 500px;">
+        <p>CUSTOMER SERVICE</p>
+        <a href="Questions" class="nicelinks">Frequently Asked Questions</a>
+        <a href="Privacy" class="nicelinks">Privacy Policy</a>
+        <a href="Terms" class="nicelinks">Terms & Conditions</a>
+        <a href="Contacts" class="nicelinks">Contact Us</a>
       </div>
-      <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/sub_3.jpg" >
-    </div>
-  <div class="card" onclick="setFromDiv(this, 'subject', '.title')" style="width: 15rem;">
-      <div class="card-body">
-        <p class="title">Online Consultations</p>
+      <div class="p-2 footText" style="width: 500px;">
+        <p class="footText">CONTACTS</p>
+        <p class="footText">Veselības Iela 20, Rīga</p>
+        <p class="footText">Phone: +371 24 057 167</p>
+        <p class="footText">info@NourishmentZone.lv</p>
+        <a href="https://www.instagram.com/" class="nicelinks">Instagram</a>
       </div>
-      <img class="card-img-top" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/sub_4.jpg" >
+      <div class="p-2 footText" style="width: 500px;">
+        <p class="footText">WORKING HOURS</p>
+        <p class="footText"> Monday - Friday:</p>
+        <p class="footText">8:00 - 20:00</p>
+        <p class="footText">Saturday, Sunday:</p>
+        <p class="footText">Days off</p>
+      </div>
     </div>
-</div>
-<div class="subj-book-mob">
-  <select class="custom-select form-select" id="mob-subj">
-    <option selected>Choose appointment subject:</option>
-    <option value="Initial Nutrition Counseling Assessment">Initial Nutrition Counseling Assessment (90 min)</option>
-    <option value="Eating Disorder Initial Assessment">Eating Disorder Initial Assessment (90 min)</option>
-    <option value="Follow-Up Appointment">Follow-Up Appointment (30 or 60 min)</option>
-    <option value="Online Consultations">Online Consultations</option>
-  </select>
-</div>
-
-<h4 class="centered" style="margin-top: 50px;"> Choose appointment date:</h4>
-<div class="date-book">
-<form action="/action_page.php">
-  <label for="appointment" style="margin-top: 20px;">Choose appointment date: </label>
-  <input class="m-datepicker" type="date" id="appointment" name="appointment" >
-</form>
-<label for="timepicker" style="margin-top: 20px;">Choose appointment time: </label>
-<input id="timepicker" type="time"/>
-</div>
-
-<div class="date-book-mob">
-<form action="/action_page.php" style="margin-top: 20px;">
-  <label for="appointment">Choose appointment date: </label>  
-  <input type="date" id="appointment_mob" name="appointment">
-</form>
-<label for="timepicker" style="margin-top: 20px;">Choose appointment time: </label>
-<input id="timepicker" type="time"/>
-</div>
-
-<button class="btn btn-success"  id="choose" style="margin-top: 20px;".style.display='block' onclick="setTime()">Choose</button>
-</div>
-
-<div style="margin-top: 30px;">
-  <h5> Your appointment information:</h5>
-  <p>Specialist: <span  id="specialist"></span></p>
-  <p>Subject: <span id="subject"></span></p>
-  <p>Time: <span id="time"></span></p>
-
-<button class="btn btn-success"  id="book" style="margin-top: 50px;" onclick="document.getElementById('book-success').style.display='block'"> Book!</button>
-  <div id="book-success" class="modal">
-    <span onclick="document.getElementById('book-success').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Content -->
-  <form class="modal-content animate" action="/action_page.php" style="max-width:600px; cursor:auto">
-  <div class="container login">
-  <div style="margin-left: 20px">
-    <img id="book-pic" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/background.jpg"/>
-      <h4 class="centered"> Your booking was successful!</h4>
-      <p class="centered"> You will receive an e-mail after your specialist has approved your appointment.</p>
-  </div>
-  <div style="margin-bottom: 20px; margin-left: 30px;">
-      <button type="button" onclick="document.getElementById('book-success').style.display='none'" class="btn btn-success" style="width: 93%">Return</button>
-  </div>
-  </form>
-  </div>
-</div>
-<div class="centered">
-<p class="centered" style="margin-top: 50px;">Please cancel, confirm or change the booking at least 24h before the appointment.</p>
-<p class="centered">Arrive at your appointment on time and without guests. Make sure you have your ID card or passport.</p>
-<p class="centered">If you will be running late please contact us in time.</p>
-</div>
-</div>
-
-<!-- Footer -->
-<footer class="footer"> 
-  <div class="d-flex">
-    <div class="mr-auto p-2" style="width: 100%">
-      <a href="/">
-        <img id="logofooter" src="https://sigitagavare.github.io/Practical_tasks/Final_task/content/logo.jpg"></a>
-    </div>
-    <div class="p-2 footText" style="width: 500px;">
-      <p>CUSTOMER SERVICE</p>
-      <a href="Questions" class="nicelinks">Frequently Asked Questions</a>
-      <a href="Privacy" class="nicelinks">Privacy Policy</a>
-      <a href="Terms" class="nicelinks">Terms & Conditions</a>
-      <a href="Contacts" class="nicelinks">Contact Us</a>
-    </div>
-    <div class="p-2 footText" style="width: 500px;">
-      <p class="footText">CONTACTS</p>
-      <p class="footText">Veselības Iela 20, Rīga</p>
-      <p class="footText">Phone: +371 24 057 167</p>
-      <p class="footText">info@NourishmentZone.lv</p>
-      <a href="https://www.instagram.com/" class="nicelinks">Instagram</a>
-    </div>
-    <div class="p-2 footText" style="width: 500px;">
-      <p class="footText">WORKING HOURS</p>
-      <p class="footText"> Monday - Friday:</p>
-      <p class="footText">8:00 - 20:00</p>
-      <p class="footText">Saturday, Sunday:</p>
-      <p class="footText">Days off</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 </body>
+
 </html>

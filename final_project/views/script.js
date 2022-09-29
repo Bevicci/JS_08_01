@@ -152,22 +152,17 @@ const loginUser = () => {
 
 const setAppointment = () => {
     console.log(`user ${currentUser} sets appointment`);
-    const URL = 'http://localhost:3000/booking';
-    const startDate = document.getElementById('uname').value
-    const startTime = document.getElementById('uname').value
-    const duration = document.getElementById('psw').value // kak dolgo -> 90 min
-    const subject = document.getElementById('psw').value
-    const specialist = document.getElementById('psw').value
-    // 20.05.2022
-    // 19:40:00
-    // 20.05.2022 19:40:00
-    const start = new Date(startDate + ' ' + startTime) // timestamp 1982387298571
+    document.getElementById('book-success').style.display='block'
 
-    const end = new Date(start + duration * 360) // duration v sec
+    const URL = 'http://localhost:3000/booking';
+    const startDate = document.getElementById('time').value
+    const subject = document.getElementById('subject').value
+    const specialist = document.getElementById('specialist').value
+    // const start = new Date(startDate + ' ' + startTime) 
+
     let data = {
         user: currentUser,
-        start: start,
-        end: end,
+        start: startDate,
         subject: subject,
         specialist: specialist
     };
@@ -197,3 +192,4 @@ function setTime() {
     const time = document.getElementById("timepicker").value;
     document.getElementById("time").innerHTML = date + " " + time;
 }
+

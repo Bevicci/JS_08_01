@@ -58,7 +58,7 @@ app.get('/booking', (req, res) => {
 app.post('/booking', (req, res) => {
     console.log('POST booking with data: ' + JSON.stringify(req.body))
     const { userId, start, end, specialist, subject } = req.body;
-    db.query(`SELECT * FROM booking WHERE start < ${start} OR end < ${end}`, (error, results) => {
+    db.query(`SELECT start, end, specialist FROM booking:`, (error, results) => {
         if (error)
             throw error;
         const keys = Object.keys(results).length;
